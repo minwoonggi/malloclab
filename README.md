@@ -48,8 +48,6 @@ void free(void *ptr);
 
 **동적 → 런타임시 → 힙에 메모리 할당~>해제**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/98194db6-77fb-4f22-8e55-fb06f5d1f7a7/9d940c3f-7632-491e-871d-93c9d21f5260/Untitled.png)
-
 ### 명시적 할당기 vs 묵시적 할당기
 
 - **명시적 할당기**는 할당된 블럭을 명시적으로 해제해줘야 하는 할당기를 말합니다 C의 malloc,free 등
@@ -73,8 +71,7 @@ void free(void *ptr);
 
 **가용 블록**은 할당되지 않은 자유로운 메모리 공간을 나타냅니다. 이전에 할당된 메모리 블록이 해제 되었거나 할당이 된적 없는 메모리 공간을 이죠.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/98194db6-77fb-4f22-8e55-fb06f5d1f7a7/557b3e00-fc5e-4619-9391-60381c33ddd9/Untitled.png)
-
+![Untitled](https://www.notion.so/project-of-malloc-lab-157600a620b7424aab6b97c142728340?pvs=4#25e9e6f701b34674bda8efe663738b80)
 메모리 할당의 기본 단위는 시스템에 따라 다를 수 있습니다. 대부분의 시스템은 메모리 할당을 위해 최소 단위로 1바이트를 사용합니다. 그러나 메모리 할당자는 일반적으로 메모리를 효율적으로 사용하기 위해 여러 바이트 단위로 메모리를 할당할 수 있습니다.
 
 일반적으로 많은 시스템에서는 4바이트(32비트) 또는 8바이트(64비트)와 같은 크기의 블록을 사용하여 메모리를 할당합니다. 이는 대부분의 데이터 타입이 4바이트 또는 8바이트 정렬되어 있기 때문에 효율적인 메모리 사용을 위한 것입니다.
